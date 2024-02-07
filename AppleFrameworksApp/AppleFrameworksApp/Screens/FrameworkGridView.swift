@@ -17,11 +17,7 @@ struct FrameworkGridView: View {
                 List{
                     ForEach(MockData.frameworks){ element in
                         NavigationLink(destination : FrameworkDetailView(element: element, isShowingDetailView: $viewModel.isShowingDetailsView, hideXMarkButton: true) ){
-                            HStack{
-                                Image(element.imageName).resizable().frame(width: 70  , height: 70)
-                                Text(element.name).font(.title2).fontWeight(.semibold).scaledToFit().minimumScaleFactor(0.6).padding()
-                                Spacer()
-                            }
+                            FramworkKistItem(element: element)
                         }
                     }
                 }.navigationTitle("🍎 Frameworks").toolbar{
@@ -31,13 +27,13 @@ struct FrameworkGridView: View {
                         }
                     }
                 }
-            }
+            }.accentColor(Color(.label))
         } else {
             NavigationView {
                 ScrollView{
                         LazyVGrid(columns: viewModel.columns, content: {
                             ForEach(MockData.frameworks){
-                                element in FrameWorkListItem(framework: element).onTapGesture {
+                                element in FrameWorkGridListItem(framework: element).onTapGesture {
                                     viewModel.selectedFramework = element
                                 }
                             }
@@ -61,14 +57,3 @@ struct FrameworkGridView: View {
     FrameworkGridView()
 }
 
-
-struct FrameWorkListItem: View {
-    let framework: Framework
-    
-    var body: some View {
-        VStack  {
-            Image(framework.imageName).resizable().frame(width: 90  , height: 90)
-            Text(framework.name).font(.title2).fontWeight(.semibold).scaledToFit().minimumScaleFactor(0.6)
-        }.padding()
-    }
-}
