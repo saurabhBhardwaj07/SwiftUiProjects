@@ -14,6 +14,11 @@
 		D03476DB2B7561B400A69157 /* AppetizersListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476DA2B7561B400A69157 /* AppetizersListingTests.swift */; };
 		D03476E52B7561B400A69157 /* AppetizersListingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476E42B7561B400A69157 /* AppetizersListingUITests.swift */; };
 		D03476E72B7561B400A69157 /* AppetizersListingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476E62B7561B400A69157 /* AppetizersListingUITestsLaunchTests.swift */; };
+		D03476F42B75621300A69157 /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476F32B75621300A69157 /* AppetizerTabView.swift */; };
+		D03476F62B75622100A69157 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476F52B75622100A69157 /* AccountView.swift */; };
+		D03476F82B75622E00A69157 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476F72B75622E00A69157 /* OrderView.swift */; };
+		D03476FA2B75625500A69157 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03476F92B75625500A69157 /* AppetizerListView.swift */; };
+		D05E92802B76B1F8002D906C /* AppetizerModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E927F2B76B1F8002D906C /* AppetizerModelClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		D03476E02B7561B400A69157 /* AppetizersListingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppetizersListingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03476E42B7561B400A69157 /* AppetizersListingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersListingUITests.swift; sourceTree = "<group>"; };
 		D03476E62B7561B400A69157 /* AppetizersListingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersListingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D03476F32B75621300A69157 /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
+		D03476F52B75622100A69157 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		D03476F72B75622E00A69157 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		D03476F92B75625500A69157 /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
+		D05E927F2B76B1F8002D906C /* AppetizerModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerModelClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,11 @@
 				D03476CB2B7561B300A69157 /* ContentView.swift */,
 				D03476CD2B7561B400A69157 /* Assets.xcassets */,
 				D03476CF2B7561B400A69157 /* Preview Content */,
+				D03476F32B75621300A69157 /* AppetizerTabView.swift */,
+				D03476F52B75622100A69157 /* AccountView.swift */,
+				D03476F72B75622E00A69157 /* OrderView.swift */,
+				D03476F92B75625500A69157 /* AppetizerListView.swift */,
+				D05E927F2B76B1F8002D906C /* AppetizerModelClass.swift */,
 			);
 			path = AppetizersListing;
 			sourceTree = "<group>";
@@ -257,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03476F62B75622100A69157 /* AccountView.swift in Sources */,
+				D03476F42B75621300A69157 /* AppetizerTabView.swift in Sources */,
 				D03476CC2B7561B300A69157 /* ContentView.swift in Sources */,
+				D05E92802B76B1F8002D906C /* AppetizerModelClass.swift in Sources */,
 				D03476CA2B7561B300A69157 /* AppetizersListingApp.swift in Sources */,
+				D03476F82B75622E00A69157 /* OrderView.swift in Sources */,
+				D03476FA2B75625500A69157 /* AppetizerListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
