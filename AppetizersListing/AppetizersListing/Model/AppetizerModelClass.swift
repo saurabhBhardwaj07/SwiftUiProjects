@@ -20,7 +20,7 @@ struct AppetizerModelClass : Decodable , Identifiable {
     let carbs: Int
 }
 
-struct ApetizerApiResponse{
+struct ApetizerApiResponse : Decodable{
     let request: [AppetizerModelClass]
 }
 

@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+    
+    // for passing the data refrence use ObservedObject
+    // and to intiallize the state use SateObject
+    @StateObject var viewModel = AppetizerListViewModel()
     var body: some View {
         NavigationView{
-            Text("AppetizerList view").navigationTitle("🍔 Appetizers")
+            List(viewModel.appetizers , id: \.id){
+                apetizer in  AppetizerListCell(appetizer: apetizer)
+            }.navigationTitle("🍔 Appetizers")
+        }.onAppear{
+            viewModel.getAppetizers()
         }
     }
 }
@@ -21,3 +29,4 @@ struct AppetizerListView_Preview: PreviewProvider{
         AppetizerListView()
     }
 }
+
