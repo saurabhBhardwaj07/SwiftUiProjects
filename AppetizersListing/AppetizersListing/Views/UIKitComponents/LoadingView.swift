@@ -7,12 +7,38 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+
+// showing loader by the UIKIT
+struct ActivityIndicator: UIViewRepresentable{
+    
+    func makeUIView(context: Context) -> some UIActivityIndicatorView {
+        
+        let activityIndicatorView = UIActivityIndicatorView(style: .large)
+        activityIndicatorView.color = UIColor.BrandPrimary
+        activityIndicatorView.startAnimating()
+        return activityIndicatorView
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+    
+    }
+    
+}
+
+
+
+
+struct LoadingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color(.systemBackground).ignoresSafeArea(.all)
+//            ActivityIndicator()
+            ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .BrandPrimary)).scaleEffect(3)
+        }
+        
     }
 }
 
 #Preview {
-    SwiftUIView()
+    LoadingView()
 }
