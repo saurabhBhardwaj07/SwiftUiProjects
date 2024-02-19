@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct AppetizersListingApp: App {
+    
+    var order = OrderViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            AppetizerTabView()
+            AppetizerTabView().environmentObject(order)
         }
     }
 }

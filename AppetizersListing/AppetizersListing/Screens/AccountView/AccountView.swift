@@ -14,12 +14,9 @@ struct AccountView : View {
     
    @StateObject var viewModel = AccountViewModel()
 
-    
-    
     var body: some View {
         NavigationView{
             Form{
-                
                 Section(header: Text("Personal Info")){
                     TextField("First Name", text: $viewModel.user.firstName)
                         .submitLabel(.next)

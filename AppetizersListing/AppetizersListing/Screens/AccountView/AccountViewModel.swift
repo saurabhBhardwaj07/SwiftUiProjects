@@ -33,7 +33,6 @@ final class AccountViewModel: ObservableObject{
         do {
             let data =  try JSONEncoder().encode(user)
             userData = data
-            
             alertItem = AlertContext.userSaveSucess
             
         } catch {

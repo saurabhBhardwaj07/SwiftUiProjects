@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct AppetizerDetailView: View {
+    
+    @EnvironmentObject var order: OrderViewModel
      
     let appetizer: AppetizerModelClass
     @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack{
-            
             AppetizerRemoteImage(urlString: appetizer.imageURL).aspectRatio(contentMode: .fit).frame(width:  300 , height: 225 , alignment: .center)
             VStack{
                 Text(appetizer.name).font(.title2).fontWeight(.semibold)
@@ -26,6 +27,8 @@ struct AppetizerDetailView: View {
                 }
                 Spacer()
                   Button{
+                      order.add(appetizer)
+                      isShowingDetail = false
                 } label: {
                     Text("$\(appetizer.price , specifier: "%.2f") - Add to Order").font(.title3).fontWeight(.semibold).frame(width: 260 , height: 50).foregroundColor(.white).background(Color.brandPrimary).cornerRadius(10)
                 }
