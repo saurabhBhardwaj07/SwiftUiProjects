@@ -20,7 +20,9 @@ struct AppetizerListView: View {
                         viewModel.selectedAppetizers = apetizer
                         viewModel.isShowingDetails = true
                     }
-                }.navigationTitle("🍔 Appetizers").listStyle(.plain).disabled(viewModel.isShowingDetails)
+                }.navigationTitle("🍔 Appetizers")
+                 .listStyle(.plain)
+                 .disabled(viewModel.isShowingDetails)
             }
             .task {
                 viewModel.getAppetizers()
